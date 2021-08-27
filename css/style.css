@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;700;800;900&family=Roboto+Slab:wght@200;500;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #dbdbdb;
+    font-family: Inter;
+}
+
+.container{
+    max-width: 1900px;
+}
+
+.conteudo{
+    width: 80%;
+    height: 70%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.conteudo::before{
+    content: "";
+    position: absolute;
+    background-color: #007476;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    left: 0;
+}
+
+.titulo{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.titulo-primario{
+    color: white;
+}
+
+.titulo-secundario{
+    color: #007476;
+}
+
+.descricao-primaria{
+    color: white;
+}
+
+.descricao-secundaria{
+    color: #7f8c8d;
+}
+
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: none;
+    width: 150px;
+    height: 35px;
+    background-color: #007476;
+    transition:background-color 0.4s;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #007476;
+    border-color: #015758;
+    transition:ease-in-out;
+    transition-duration: 0.1s;
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    border:none;
+    box-shadow: none;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-check:active+.btn-outline-secondary:focus, .btn-check:checked+.btn-outline-secondary:focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.dropdown-toggle.show:focus, .btn-outline-secondary:active:focus {
+     box-shadow: none;
+}
+
+.btn-outline-secondary{
+    background-color: #007476;
+    border: 1px solid white;
+}
+
+
+.btn-outline-secondary:hover{
+    background-color: white;
+    color: #007476;
+    border: 1px solid white;
+}
+
+.primeiro-conteudo{
+    border-radius: 15px;
+}
+
+.segundo-conteudo{
+    border-radius: 15px;
+}
+
+.segundo-conteudo .primeira-coluna{
+    order:2;
+    z-index: -1;
+}
+
+.segundo-conteudo .segunda-coluna{
+    order: 1;
+    z-index: -1;
+}
+
+.primeira-coluna{
+    text-align: center;
+    flex: 2;
+    z-index: 10;
+}
+
+.segunda-coluna{
+    flex: 3;
+    z-index: 11;
+}
+
+form{
+    width: 50%;
+}
+
+
+form input{
+    height: 50px;
+    border: none;
+}
+
+.segundo-conteudo form{
+    width: 50%;
+}
+
+.form-control{
+    color: #007476;
+    font-size: 20px;
+}
+
+.far{
+    padding-right: 8px;
+}
+
+.fa-lock{
+    padding-right: 8px;
+}
+
+.fa-user-plus{
+    padding: 20px;
+    font-size: 30px;
+    background-color: rgba(0, 128, 128, 0.753);
+    border-radius: 150%;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.form-control:focus {
+    color: #007476;
+    background-color: rgb(241, 236, 236);
+    border-color: #007476;
+    outline: 0;
+    box-shadow: none;
+    font-size: 20px;
+}
+
+.remember{
+    text-align: center;
+    align-content: center;
+    margin: 15px 0 auto;
+}
+
+.remember a{
+    color:#007476;
+}
+
+label{
+    font-size: 20px;
+}
+
+.entrar-js .primeiro-conteudo .primeira-coluna,
+.entrar-js .primeiro-conteudo .segunda-coluna{
+    z-index: -1;
+}
+
+.entrar-js .segundo-conteudo .primeira-coluna,
+.entrar-js .segundo-conteudo .segunda-coluna{
+    z-index: 11;
+}
+
+.entrar-js .conteudo::before{
+    left: 60%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.5s;
+    z-index: 12;
+}
+
+.entrar-js .segundo-conteudo .primeira-coluna{
+    z-index: 13;
+}
+
+.cadastro-js .conteudo::before{
+    animation: slideout 1.5s;
+    z-index: 12;
+}
+
+.cadastro-js .segundo-conteudo .primeira-coluna,
+.cadastro-js .segundo-conteudo .segunda-coluna{
+    z-index: -1;
+}
+
+.cadastro-js .primeiro-conteudo .segunda-coluna{
+    z-index: 11;
+}
+
+.cadastro-js .primeiro-conteudo .primeira-coluna{
+    z-index: 13;
+}
+
+
+.entrar-js .primeiro-conteudo .segunda-coluna{
+    z-index: -1;
+    position: relative;
+    animation: deslocamento 1.5s;
+}
+
+@keyframes deslocamento{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    to{
+        left: -110px;
+        opacity: 0;
+    }
+
+    25% {
+        left: -80px;
+        opacity: -5;
+    }
+
+    50% {
+        left: -100px;
+        opacity: .2;
+    }
+}
+
+/*ANIMAÇÃO CSS*/
+
+@keyframes slidein{
+    from {
+        left: 0;
+        width: 50%;
+    }
+
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    100% {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout{
+    from {
+        left: 60%;
+        width: 40%; 
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+
+    100% {
+        left: 0;
+        width: 40%
+    }
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 1040px) {
+    .conteudo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .conteudo::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .primeiro-conteudo, .segundo-conteudo {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .primeira-coluna, .segunda-coluna {
+        width: 100%;
+    }
+
+    .entrar-js .conteudo::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    /* ANIMAÇÃO MOBILE CSS*/
+
+    @keyframes slidein {
+
+        from {
+            top: 0;
+            height: 40%;
+        }
+
+        25% {
+            top: 5%;
+            height: 50%;
+        }
+
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+
+        75% {
+            top: 45%;
+            height: 50%;
+        }
+
+        to {
+            top: 60%;
+            height: 40%;
+        }
+    }
+
+    @keyframes slideout {
+
+        from {
+            top: 60%;
+            height: 40%;
+        }
+
+        25% {
+            top: 45%;
+            height: 50%;
+        }
+
+        50% {
+            top: 25%;
+            height: 60%;
+        }
+
+        75% {
+            top: 5%;
+            height: 50%;
+        }
+
+        to {
+            top: 0;
+            height: 40%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 740px){
+    .form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .form {
+        width: 100%;
+        height: 100%;
+    }
+}
